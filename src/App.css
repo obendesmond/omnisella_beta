@@ -1,0 +1,44 @@
+/* #AF7EEB */
+*{
+    margin:0;
+    padding:0;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+    background-color: #E3E9FE;
+}
+
+.formContainer {
+    background-color: #AF7EEB;
+    padding: 10px 15px 10px 15px;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.formContainer input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: #AF7EEB;
+    color:white;
+    flex:1;
+    font-size: 18px;
+}
+
+.formContainer .menuIcon {
+    color:white;
+    font-size: 30px;
+}
+
+::placeholder {
+    color:rgba(255, 255, 255, 0.596);
+}
+
