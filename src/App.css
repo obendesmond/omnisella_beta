@@ -15,7 +15,7 @@
 .formContainer {
     background-color: #AF7EEB;
     padding: 10px 15px 10px 15px;
-    width: 30%;
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-items: center;
