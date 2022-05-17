@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { HiMenu } from "react-icons/hi";
-import Card from "./Card";
+import Card from "./components/Card";
 import "./App.css";
+import TodoField from "./components/TodoField";
 
 const App = () => {
   const [todo, setTodo] = useState("");
@@ -14,26 +14,23 @@ const App = () => {
   const handleSubmit = e => {
     e.preventDefault();
     setList([...list, todo]);
+    setTodo("");
+  };
+
+  const handleClick = i => {
+    // splice(start, deleteCount)
+    const result = list.filter((item, index) => index !== i);
+    setList(result);
   };
 
   return (
     <div className="page">
-      <form
-        type="submit"
-        onSubmit={e => handleSubmit(e)}
-        className="formContainer"
-      >
-        <HiMenu className="menuIcon" />
-        <input
-          value={todo}
-          onChange={e => handleOnChange(e.target.value)}
-          placeholder="Enter todo list"
-          type="text"
-        />
-      </form>
-      {list.map((list, i) => (
-        <p key={i}>{list}</p>
-      ))}
+      <TodoField
+        todo={todo}
+        handleSubmit={handleSubmit}
+        handleOnChange={handleOnChange}
+      />
+      <Card handleClick={handleClick} list={list} />
     </div>
   );
 };

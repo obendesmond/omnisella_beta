@@ -6,6 +6,7 @@
 
 .page {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 99vh;
@@ -42,3 +43,20 @@
     color:rgba(255, 255, 255, 0.596);
 }
 
+.card {
+    background-color: white;
+    width: 300px;
+    padding:20px 0 20px 0;
+    margin-top: 20px;
+}
+
+.todo {
+    padding: 5px 0 5px 0;
+    border-bottom: 1px solid grey;
+    text-align: center;
+    cursor: pointer;
+}
+.todo:hover {
+    background-color: grey;
+    
+}
