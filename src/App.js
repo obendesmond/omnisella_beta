@@ -18,7 +18,6 @@ const App = () => {
   };
 
   const handleClick = i => {
-    // splice(start, deleteCount)
     const result = list.filter((item, index) => index !== i);
     setList(result);
   };
