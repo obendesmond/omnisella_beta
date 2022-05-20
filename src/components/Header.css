@@ -32,7 +32,7 @@
     margin-right: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .btns button {
     padding: 10px 25px;
