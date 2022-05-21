@@ -15,17 +15,20 @@ export default function HomePage() {
   };
 
   return (
-    <div className="container">
-      {products.map(({ title, id, img, price }) => (
-        <Card
-          handleAddToCart={handleAddToCart}
-          key={id}
-          id={id}
-          img={img}
-          price={price}
-          title={title}
-        />
-      ))}
-    </div>
+    <>
+      <h1 className="home_title">Best of Omnisella's Quality Items</h1>
+      <div className="container">
+        {products.map(({ title, id, img, price }) => (
+          <Card
+            handleAddToCart={handleAddToCart}
+            key={id}
+            id={id}
+            img={img}
+            price={price}
+            title={title}
+          />
+        ))}
+      </div>
+    </>
   );
 }

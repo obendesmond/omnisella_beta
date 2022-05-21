@@ -1,54 +1,57 @@
 .header {
-    width: 100vw;
-    background-color: #081730;
-    padding: 20px 0 20px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
+  width: 100vw;
+  background-color: #081730;
+  padding: 20px 0 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .logo {
-    font-size: 30px;
-    font-weight: bolder;
-    margin-left: 50px;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-left: 50px;
 }
 
 .links {
-    flex:0.2;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  flex: 0.2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .links a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .btns {
-    flex:0.2;
-    margin-right: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  flex: 0.2;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .btns button {
-    padding: 10px 25px;
-    border-radius: 10px;
-    cursor:pointer;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .btns :first-child {
-    border:2px solid #232A4E;
-    background-color: transparent;
-    color:white;
+  border: 2px solid #232a4e;
+  background-color: transparent;
+  color: white;
 }
-.btns :first-child:hover{
-    background-color: #232A4E;
+.btns :first-child:hover {
+  background-color: #232a4e;
 }
 .btns :last-child {
-    border:none;
-    color: white;
-    background-color: #232A4E;
+  border: none;
+  color: white;
+  background-color: #232a4e;
 }
