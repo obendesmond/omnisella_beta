@@ -8,7 +8,10 @@
   border-radius: 20px;
   max-width: 250px;
   text-align: center;
-  box-shadow: 1px 5px 11px -3px rgba(0, 0, 0, 0.4);
+  transition: 0.5s ease-in;
+}
+.card:hover {
+  box-shadow: 1px 5px 11px -3px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 1px 5px 11px -3px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 1px 5px 11px -3px rgba(0, 0, 0, 0.4);
 }
@@ -17,11 +20,8 @@
   width: 200px;
   height: 200px;
   object-fit: contain;
-  transition: 0.5s ease-in;
   cursor: pointer;
-}
-.img:hover {
-  transform: scale(1.1);
+  border-radius: 10px;
 }
 
 .card p {
