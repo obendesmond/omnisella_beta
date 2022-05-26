@@ -1,18 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { items } from "../data";
+import React, { useContext } from "react";
 import Card from "../components/Card";
 import "./HomePage.css";
+import CartContext from "../context/CartContextProvider";
 
 export default function HomePage() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    setProducts(items);
-  }, []);
-
-  const handleAddToCart = id => {
-    alert(id);
-  };
+  const { products, handleAddToCart } = useContext(CartContext);
 
   return (
     <>
