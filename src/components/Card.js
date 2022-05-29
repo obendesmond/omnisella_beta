@@ -16,7 +16,10 @@ export default function Card({ title, id, img, price, handleAddToCart }) {
         <p className="title">{title}</p>
         <p>${price}</p>
       </div>
-      <button onClick={() => handleAddToCart(id)} className="addBtn">
+      <button
+        onClick={() => handleAddToCart({ title, id, img, price })}
+        className="addBtn"
+      >
         Add to Cart
       </button>
     </div>

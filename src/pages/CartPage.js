@@ -1,5 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../context/CartContextProvider";
+import CartItem from "../components/CartItem";
 
 export default function CartPage() {
-  return <div>CartPage</div>;
+  const { cartProducts } = useContext(CartContext);
+
+  return (
+    <div>
+      {cartProducts.map(item => (
+        <CartItem item={item} key={item.id} />
+      ))}
+    </div>
+  );
 }

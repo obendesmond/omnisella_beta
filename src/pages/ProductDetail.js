@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { items } from "../data";
 import CartContext from "../context/CartContextProvider";
 
 import styles from "./productDetail.module.css";
@@ -22,7 +21,10 @@ const ProductDetail = () => {
             <p className={styles.title}>{title}</p>
             <p className={styles.price}>${price}</p>
             <p>{description}</p>
-            <button onClick={() => handleAddToCart(id)} className={styles.btn}>
+            <button
+              onClick={() => handleAddToCart({ title, id, img, price })}
+              className={styles.btn}
+            >
               Add to Cart
             </button>
           </div>

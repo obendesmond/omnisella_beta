@@ -11,11 +11,11 @@ const CartContextProvider = ({ children }) => {
     setProducts(items);
   }, []);
 
-  const handleAddToCart = id => {
+  const handleAddToCart = ({ title, id, img, price }) => {
     const existingItem = cartProducts.find(itemId => itemId === id);
 
     if (existingItem) return alert("Item already exists!");
-    else return setCartProducts([...cartProducts, id]);
+    else return setCartProducts([...cartProducts, { title, id, img, price }]);
   };
 
   return (
