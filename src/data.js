@@ -12,6 +12,7 @@ const items = [
     title: "Iphone Scarletxx",
     img: phone,
     price: 999.999,
+    qty: 1,
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
@@ -20,6 +21,7 @@ const items = [
     title: "Bedshit Lova",
     img: bedshit,
     price: 199.99,
+    qty: 1,
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
@@ -28,6 +30,7 @@ const items = [
     title: "Refregirator XY",
     img: fridge,
     price: 1200,
+    qty: 1,
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
@@ -36,6 +39,7 @@ const items = [
     title: "Scarlet Bed",
     img: bed,
     price: 1200,
+    qty: 1,
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
@@ -44,6 +48,7 @@ const items = [
     title: "Tshirt Scott",
     img: scott,
     price: 10.99,
+    qty: 1,
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
@@ -52,6 +57,7 @@ const items = [
     title: "Snickers Ladious",
     img: snickers,
     price: 150.99,
+    qty: 1,
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
@@ -60,6 +66,7 @@ const items = [
     title: "Bounce Bed",
     img: spring,
     price: 432.98,
+    qty: 1,
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
@@ -68,6 +75,7 @@ const items = [
     title: "Guardians of the Galaxy",
     img: scott,
     price: 231,
+    qty: 1,
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },

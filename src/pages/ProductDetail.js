@@ -8,7 +8,7 @@ const ProductDetail = () => {
   const { products, handleAddToCart } = useContext(CartContext);
   const { productId } = useParams();
 
-  return products.map(({ img, id, title, price, description }) => {
+  return products.map(({ img, id, title, price, qty, description }) => {
     if (id == productId) {
       return (
         <div key={id} className={styles.container}>
@@ -22,7 +22,7 @@ const ProductDetail = () => {
             <p className={styles.price}>${price}</p>
             <p>{description}</p>
             <button
-              onClick={() => handleAddToCart({ title, id, img, price })}
+              onClick={() => handleAddToCart({ title, id, img, price, qty })}
               className={styles.btn}
             >
               Add to Cart

@@ -10,7 +10,7 @@ export default function HomePage() {
     <>
       <h1 className="home_title">Best of Omnisella's Quality Items</h1>
       <div className="container">
-        {products.map(({ title, id, img, price, description }) => (
+        {products.map(({ title, id, img, price, qty, description }) => (
           <Card
             handleAddToCart={handleAddToCart}
             key={id}
@@ -18,6 +18,7 @@ export default function HomePage() {
             img={img}
             price={price}
             title={title}
+            qty={qty}
           />
         ))}
       </div>

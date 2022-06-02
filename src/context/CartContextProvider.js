@@ -11,15 +11,50 @@ const CartContextProvider = ({ children }) => {
     setProducts(items);
   }, []);
 
-  const handleAddToCart = ({ title, id, img, price }) => {
+  const handleAddToCart = ({ title, id, img, price, qty }) => {
     const existingItem = cartProducts.find(item => item.id === id);
 
     if (existingItem) return alert("Item already exists!");
-    else return setCartProducts([...cartProducts, { title, id, img, price }]);
+    else
+      return setCartProducts([...cartProducts, { title, id, img, price, qty }]);
+  };
+
+  const handleRemoveFromCart = id => {
+    const newCartProducts = cartProducts.filter(item => item.id !== id);
+    setCartProducts(newCartProducts);
+  };
+
+  const handleIncreaseQty = id => {
+    const newCartProducts = cartProducts.map(item => {
+      if (item.id === id) item.qty++;
+      return item;
+    });
+
+    setCartProducts(newCartProducts);
+  };
+
+  const handleDecreaseQty = id => {
+    const newCartProducts = cartProducts.map(item => {
+      if (item.id === id) {
+        if (item.qty > 1) item.qty--;
+      }
+      return item;
+    });
+
+    setCartProducts(newCartProducts);
   };
 
   return (
-    <CartContext.Provider value={{ products, cartProducts, handleAddToCart }}>
+    <CartContext.Provider
+      value={{
+        products,
+        cartProducts,
+        handleAddToCart,
+        handleRemoveFromCart,
+        handleIncreaseQty,
+        handleDecreaseQty,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

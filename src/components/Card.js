@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Card.css";
 
-export default function Card({ title, id, img, price, handleAddToCart }) {
+export default function Card({ title, id, img, price, qty, handleAddToCart }) {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
@@ -17,7 +17,7 @@ export default function Card({ title, id, img, price, handleAddToCart }) {
         <p>${price}</p>
       </div>
       <button
-        onClick={() => handleAddToCart({ title, id, img, price })}
+        onClick={() => handleAddToCart({ title, id, img, price, qty })}
         className="addBtn"
       >
         Add to Cart
