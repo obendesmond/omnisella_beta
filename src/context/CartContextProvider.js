@@ -44,6 +44,10 @@ const CartContextProvider = ({ children }) => {
     setCartProducts(newCartProducts);
   };
 
+  const removeAll = () => {
+    setCartProducts([]);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -53,6 +57,7 @@ const CartContextProvider = ({ children }) => {
         handleRemoveFromCart,
         handleIncreaseQty,
         handleDecreaseQty,
+        removeAll,
       }}
     >
       {children}

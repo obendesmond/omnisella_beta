@@ -3,7 +3,7 @@ import CartContext from "../context/CartContextProvider";
 import CartItem from "../components/CartItem";
 
 export default function CartPage() {
-  const { cartProducts } = useContext(CartContext);
+  const { cartProducts, removeAll } = useContext(CartContext);
 
   return cartProducts.length > 0 ? (
     <div style={{ padding: "100px" }}>
@@ -16,7 +16,13 @@ export default function CartPage() {
         }}
       >
         <h2>Shopping Cart ({cartProducts.length})</h2>
-        <p>Remove All</p>
+        <a
+          href="#"
+          onClick={removeAll}
+          style={{ cursor: "pointer", color: "red" }}
+        >
+          Remove All
+        </a>
       </div>
       {cartProducts.map(item => (
         <CartItem item={item} key={item.id} />
