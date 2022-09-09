@@ -1,37 +1,29 @@
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
-import HomePage from "./pages/HomePage";
-import CartPage from "./pages/CartPage";
-import BlogsPage from "./pages/BlogsPage";
-import ContactPage from "./pages/ContactPage";
-import NoPage from "./pages/NoPage";
-import Header from "./components/Header";
-import ProductDetail from "./pages/ProductDetail";
-import { CartContextProvider } from "./context/CartContextProvider";
 
-const App = () => {
+function App() {
+  const [input, setInput] = useState(""); // input state
+  const [todos, setTodos] = useState([]); // todo list
+
+  const handleAddTodo = () => {
+    setTodos([input, ...todos]); // push to set of todos
+    setInput(""); // reset input
+  };
+
   return (
-    <CartContextProvider>
-      <BrowserRouter>
-        {/* header */}
-        <Header />
-
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          {/* dynamic route */}
-          <Route path="/:productId" element={<ProductDetail />} />
-
-          <Route path="cart" element={<CartPage />} />
-          <Route path="blogs" element={<BlogsPage />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="*" element={<NoPage />} />
-        </Routes>
-
-        {/* footer here */}
-      </BrowserRouter>
-    </CartContextProvider>
+    <div>
+      <input
+        value={input}
+        onChange={e => setInput(e.target.value)}
+        placeholder="Add New Todo"
+      />
+      <button onClick={handleAddTodo}>Add</button>
+      <div>
+        {todos.map((todo, i) => (
+          <p key={i}>{todo}</p>
+        ))}
+      </div>
+    </div>
   );
-};
+}
 
 export default App;
